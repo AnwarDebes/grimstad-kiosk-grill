@@ -23,7 +23,7 @@ export function ReviewsSection() {
     if (diff === 0) {
       return {
         transform: "translateX(-50%) scale(1)",
-        zIndex: 50,
+        zIndex: 30,
         opacity: 1,
       }
     }
@@ -31,7 +31,7 @@ export function ReviewsSection() {
     else if (diff === 1) {
       return {
         transform: "translateX(20%) scale(0.85)",
-        zIndex: 40,
+        zIndex: 20,
         opacity: 0.6,
       }
     }
@@ -39,7 +39,7 @@ export function ReviewsSection() {
     else if (diff === 2) {
       return {
         transform: "translateX(90%) scale(0.7)",
-        zIndex: 30,
+        zIndex: 15,
         opacity: 0.3,
       }
     }
@@ -47,7 +47,7 @@ export function ReviewsSection() {
     else if (diff === reviews.length - 1) {
       return {
         transform: "translateX(-120%) scale(0.85)",
-        zIndex: 40,
+        zIndex: 20,
         opacity: 0.6,
       }
     }
@@ -55,14 +55,14 @@ export function ReviewsSection() {
     else if (diff === reviews.length - 2) {
       return {
         transform: "translateX(-190%) scale(0.7)",
-        zIndex: 30,
+        zIndex: 15,
         opacity: 0.3,
       }
     }
     // Hidden cards
     return {
       transform: "translateX(-50%) scale(0.5)",
-      zIndex: 10,
+      zIndex: 5,
       opacity: 0,
     }
   }
@@ -141,11 +141,10 @@ export function ReviewsSection() {
             <button
               key={index}
               onClick={() => setActiveIndex(index)}
-              className={`h-3 rounded-full transition-all duration-300 ${
-                index === activeIndex
+              className={`h-3 rounded-full transition-all duration-300 ${index === activeIndex
                   ? "bg-flame-orange w-8"
                   : "bg-muted-foreground/30 hover:bg-muted-foreground/50 w-3"
-              }`}
+                }`}
               aria-label={`Gå til anmeldelse ${index + 1}`}
             />
           ))}
