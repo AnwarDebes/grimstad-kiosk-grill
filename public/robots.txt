@@ -1,0 +1,16 @@
+# Robots.txt for Grimstad Kiosk & Grill
+# https://grimstadkiosk.no
+
+User-agent: *
+Allow: /
+
+# Sitemaps
+Sitemap: https://grimstadkiosk.no/sitemap.xml
+
+# Crawl-delay for politeness
+Crawl-delay: 1
+
+# Block access to admin or private areas (if any)
+Disallow: /api/
+Disallow: /_next/
+Disallow: /private/
